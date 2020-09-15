@@ -22,6 +22,7 @@ const onRequest = (request, response) => {
   const parsedUrl = url.parse(request.url);
   const params = query.parse(parsedUrl.query);
   const { valid } = query.parse(parsedUrl.query);
+    const { loggedIn } = query.parse(parsedUrl.query);
   const acceptedTypes = request.headers.accept.split(',');
   console.dir(parsedUrl);
   console.dir(params);
