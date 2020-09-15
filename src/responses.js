@@ -78,7 +78,7 @@ const unauthorized = (request, response, acceptedTypes, params) => {
   const responses = {
     message: 'You have succesfully viewed the content',
   };
-  if (!params.valid || params.valid !== 'loggedIn') {
+  if (!params.loggedIn || params.loggedIn !== 'yes') {
     responses.message = 'Missing loggedIn query parameter set to yes.';
     responses.id = 'Unauthorized';
     if (acceptedTypes[0] === 'text/xml') {
